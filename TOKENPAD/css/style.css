@@ -1,0 +1,1208 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0-modified | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* make sure to set some focus styles for accessibility */
+:focus {
+    outline: 0;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+input[type=search]::-webkit-search-cancel-button,
+input[type=search]::-webkit-search-decoration,
+input[type=search]::-webkit-search-results-button,
+input[type=search]::-webkit-search-results-decoration {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+
+input[type=search] {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -webkit-box-sizing: content-box;
+    -moz-box-sizing: content-box;
+    box-sizing: content-box;
+}
+
+textarea {
+    overflow: auto;
+    vertical-align: top;
+    resize: vertical;
+}
+
+/**
+ * Correct `inline-block` display not defined in IE 6/7/8/9 and Firefox 3.
+ */
+
+audio,
+canvas,
+video {
+    display: inline-block;
+    *display: inline;
+    *zoom: 1;
+    max-width: 100%;
+}
+
+/**
+ * Prevent modern browsers from displaying `audio` without controls.
+ * Remove excess height in iOS 5 devices.
+ */
+
+audio:not([controls]) {
+    display: none;
+    height: 0;
+}
+
+/**
+ * Address styling not present in IE 7/8/9, Firefox 3, and Safari 4.
+ * Known issue: no IE 6 support.
+ */
+
+[hidden] {
+    display: none;
+}
+
+/**
+ * 1. Correct text resizing oddly in IE 6/7 when body `font-size` is set using
+ *    `em` units.
+ * 2. Prevent iOS text size adjust after orientation change, without disabling
+ *    user zoom.
+ */
+
+html {
+    font-size: 100%; /* 1 */
+    -webkit-text-size-adjust: 100%; /* 2 */
+    -ms-text-size-adjust: 100%; /* 2 */
+}
+
+/**
+ * Address `outline` inconsistency between Chrome and other browsers.
+ */
+
+a:focus {
+    outline: thin dotted;
+}
+
+/**
+ * Improve readability when focused and also mouse hovered in all browsers.
+ */
+
+a:active,
+a:hover {
+    outline: 0;
+}
+
+/**
+ * 1. Remove border when inside `a` element in IE 6/7/8/9 and Firefox 3.
+ * 2. Improve image quality when scaled in IE 7.
+ */
+
+img {
+    border: 0; /* 1 */
+    -ms-interpolation-mode: bicubic; /* 2 */
+}
+
+/**
+ * Address margin not present in IE 6/7/8/9, Safari 5, and Opera 11.
+ */
+
+figure {
+    margin: 0;
+}
+
+/**
+ * Correct margin displayed oddly in IE 6/7.
+ */
+
+form {
+    margin: 0;
+}
+
+/**
+ * Define consistent border, margin, and padding.
+ */
+
+fieldset {
+    border: 1px solid #c0c0c0;
+    margin: 0 2px;
+    padding: 0.35em 0.625em 0.75em;
+}
+
+/**
+ * 1. Correct color not being inherited in IE 6/7/8/9.
+ * 2. Correct text not wrapping in Firefox 3.
+ * 3. Correct alignment displayed oddly in IE 6/7.
+ */
+
+legend {
+    border: 0; /* 1 */
+    padding: 0;
+    white-space: normal; /* 2 */
+    *margin-left: -7px; /* 3 */
+}
+
+/**
+ * 1. Correct font size not being inherited in all browsers.
+ * 2. Address margins set differently in IE 6/7, Firefox 3+, Safari 5,
+ *    and Chrome.
+ * 3. Improve appearance and consistency in all browsers.
+ */
+
+button,
+input,
+select,
+textarea {
+    font-size: 100%; /* 1 */
+    margin: 0; /* 2 */
+    vertical-align: baseline; /* 3 */
+    *vertical-align: middle; /* 3 */
+}
+
+/**
+ * Address Firefox 3+ setting `line-height` on `input` using `!important` in
+ * the UA stylesheet.
+ */
+
+button,
+input {
+    line-height: normal;
+}
+
+/**
+ * Address inconsistent `text-transform` inheritance for `button` and `select`.
+ * All other form control elements do not inherit `text-transform` values.
+ * Correct `button` style inheritance in Chrome, Safari 5+, and IE 6+.
+ * Correct `select` style inheritance in Firefox 4+ and Opera.
+ */
+
+button,
+select {
+    text-transform: none;
+}
+
+/**
+ * 1. Avoid the WebKit bug in Android 4.0.* where (2) destroys native `audio`
+ *    and `video` controls.
+ * 2. Correct inability to style clickable `input` types in iOS.
+ * 3. Improve usability and consistency of cursor style between image-type
+ *    `input` and others.
+ * 4. Remove inner spacing in IE 7 without affecting normal text inputs.
+ *    Known issue: inner spacing remains in IE 6.
+ */
+
+button,
+html input[type="button"], /* 1 */
+input[type="reset"],
+input[type="submit"] {
+    -webkit-appearance: button; /* 2 */
+    cursor: pointer; /* 3 */
+    *overflow: visible;  /* 4 */
+}
+
+/**
+ * Re-set default cursor for disabled elements.
+ */
+
+button[disabled],
+html input[disabled] {
+    cursor: default;
+}
+
+/**
+ * 1. Address box sizing set to content-box in IE 8/9.
+ * 2. Remove excess padding in IE 8/9.
+ * 3. Remove excess padding in IE 7.
+ *    Known issue: excess padding remains in IE 6.
+ */
+
+input[type="checkbox"],
+input[type="radio"] {
+    box-sizing: border-box; /* 1 */
+    padding: 0; /* 2 */
+    *height: 13px; /* 3 */
+    *width: 13px; /* 3 */
+}
+
+/**
+ * 1. Address `appearance` set to `searchfield` in Safari 5 and Chrome.
+ * 2. Address `box-sizing` set to `border-box` in Safari 5 and Chrome
+ *    (include `-moz` to future-proof).
+ */
+
+input[type="search"] {
+    -webkit-appearance: textfield; /* 1 */
+    -moz-box-sizing: content-box;
+    -webkit-box-sizing: content-box; /* 2 */
+    box-sizing: content-box;
+}
+
+/**
+ * Remove inner padding and search cancel button in Safari 5 and Chrome
+ * on OS X.
+ */
+
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+    -webkit-appearance: none;
+}
+
+/**
+ * Remove inner padding and border in Firefox 3+.
+ */
+
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+    border: 0;
+    padding: 0;
+}
+
+/**
+ * 1. Remove default vertical scrollbar in IE 6/7/8/9.
+ * 2. Improve readability and alignment in all browsers.
+ */
+
+textarea {
+    overflow: auto; /* 1 */
+    vertical-align: top; /* 2 */
+}
+
+/**
+ * Remove most spacing between table cells.
+ */
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+html,
+button,
+input,
+select,
+textarea {
+    color: #222;
+}
+
+
+::-moz-selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+::selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+img {
+    vertical-align: middle;
+}
+
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+textarea {
+    resize: vertical;
+}
+
+.chromeframe {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
+}
+
+
+
+
+/* montserrat-regular - latin */
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400;
+  src: local(''),
+       url('../fonts/montserrat-v23-latin-regular.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+       url('../fonts/montserrat-v23-latin-regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+/* montserrat-700 - latin */
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 700;
+  src: local(''),
+       url('../fonts/montserrat-v23-latin-700.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+       url('../fonts/montserrat-v23-latin-700.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+/* Adderley-Regular - latin */
+@font-face {
+  font-family: 'Adderley';
+  font-style: normal;
+  font-weight: 400;
+  src: local(''),
+       url('../fonts/Adderley-Regular.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+       url('../fonts/Adderley-Regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+/* Adderley-Bold 700 - latin*/
+@font-face {
+  font-family: 'Adderley';
+  font-style: normal;
+  font-weight: 700;
+  src: local(''),
+       url('../fonts/Adderley-Bold.woff2') format('woff2'), 
+       url('../fonts/Adderley-Bold.woff') format('woff');
+}
+@font-face {
+  font-family: 'Helvitica';
+  font-style: normal;
+  font-weight: 500;
+  src: local(''),
+       url('../fonts/HelveticaMedium.woff2') format('woff2'), 
+       url('../fonts/HelveticaMedium.woff') format('woff');
+}
+.font-helvetica {
+  font-family: 'Helvetica';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  color: #FFFFFF;
+}
+.font-helvetica-Elon{
+  font-family: 'Helvetica';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  color: #FFFFFF;
+}
+.font-helvetica-green {
+    color: #A2FF01;
+}
+.font-adderley {
+  font-family: 'Adderley';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 70px;
+  color: #FFFFFF;
+}
+.font-montserrat-bold {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+}
+.font-montserrat-normal {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+}
+.font-adderley-pink {
+    color: #FF01C7;
+    margin-bottom: 10px;
+    font-size: 50px;
+}
+.font-adderley-blue {
+    color: #07AFEF;
+    margin-bottom: 10px;
+    font-size: 50px;
+}
+.font-adderley-turquoise {
+    color: #2ED1C7;
+    margin-bottom: 10px;
+    font-size: 50px;
+}
+
+.hr {
+  border: none; /* Убираем границу для браузера Firefox */ /* Цвет линии для остальных браузеров */
+  background-color: #000000; /* Цвет линии для браузера Firefox и Opera */
+  height: 1px; /* Толщина линии */
+  margin-top: 100px;
+  margin-bottom: 100px;
+}
+html {
+  box-sizing: border-box;
+}
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+body {
+  color: white;
+  background: #202529;
+}
+.wrapper {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+/* ---header styles start--- */
+.header__logo-pic {
+    width: 240px;
+}
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    transition: .2s linear;
+    padding-bottom: 20px;
+    z-index: 999;
+}
+.header_active {
+    background: #181818;
+}
+.header__wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  justify-content: space-between;
+  padding-top: 30px;
+}
+.header__list {
+  display: flex;
+  flex-wrap: wrap;
+}
+.header__item {
+  margin-right: 60px;
+
+}
+.header__item:last-child {
+  margin-right: 0;
+}
+.header__link {
+  font-size: 18px;
+  line-height: 28px;
+  color: white;
+  text-decoration: none;
+}
+.header__link:hover, .header__link:focus, .header__link:active {
+    opacity: .75;
+}
+.header__burger {
+    display: none;
+    width: 40px;
+    height: 28px;
+    position: relative;
+}
+.burger__line {
+    display: block;
+    width: 100%;
+    height: 2px;
+    background: #fff;
+    position: absolute;
+    left: 0;
+}
+.burger__line_first{
+    top: 0;
+}
+.burger__line_second {
+    top: 50%;
+    transform: translateY(-50%);
+}
+.burger__line_third {
+    bottom: 0;
+}
+/*--------------header styles end--------------*/
+
+
+
+/*--------------intro styles start--------------*/
+.intro {
+  padding-top: 200px;
+}
+.intro__star-svg {
+    height: 25px;
+    width: 25px;
+}
+.intro__star {
+    float: left;
+    width: 30px;
+}
+.intro__star-text{
+    height: 36px;
+    padding-top: 4px;
+    font-size: 13px;
+}
+.intro__title1 {
+    font-family: 'Adderley';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 105px;
+  color: #FFFFFF;
+}
+.intro__subtitle {
+  font-size: 20px;
+}
+#intro__subtitle-text {
+  color: #ff1150;
+}
+.rectangle-button {
+  width: 300px;
+  height: 50px;
+  background: #FF014F;
+  border-radius: 100px;
+  float: left;
+  margin-right: 20px;
+}
+.rec-button {
+    margin-top: 30px;
+}
+.rectangle__text {
+  font-size: 20px;
+  text-align: center;
+  padding-top: 11px;
+}
+.rectangle__telegram {
+    float: right;
+}
+.rectangle__telegramsvg {
+  height: 50px;
+  width: 50px;
+}
+.dwdw1svg {
+    width: 28vw;
+}
+.dwdw1 {
+    align-self: start;
+    justify-self: end;
+}
+.grid1 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 50px;
+    align-items: center;
+}
+.grid__info {
+    margin-top: 30px;
+}
+/*--------------intro styles end--------------*/
+
+
+/*--------------token styles start------------*/
+.shiba {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 20vw));
+  grid-gap: 1.5rem; 
+  justify-content: center;
+
+}
+.shiba-card-info {
+    margin-top: 5px;
+    margin-left: 80px;
+
+}
+.triangle {
+  float: left;
+  display: block;
+  width: 0;
+  height: 0;
+  border: 5.8px solid transparent;
+  border-bottom-color: #A2FF01;
+  margin: 0 7px 0 0;
+}
+.shiba_text {
+  font-size: 20px;
+  margin-bottom: 8px;
+}
+.shiba_numbers {
+  font-size: 15px;
+  color: #A2FF01;
+}
+.shiba-svg {
+  width: 60px;
+  height: 60px;
+  float: left;
+}
+/* ---token styles end--- */
+
+/* --- WhatIsToken styles start--- */
+.WhatIsToken {
+    text-align: center;
+    margin-top: 100px;
+}
+.ICO {
+    margin-bottom: 50px;
+}
+.ICO1 {
+    max-width: 387px;
+    margin: 0  auto 50px auto;
+}
+/* --- WhatIsToken styles end--- */
+
+/* --- explosion styles start--- */
+.explosion {
+    text-align: center;
+}
+.ICO2 {
+    margin-bottom: 50px;
+}
+
+/*video*/
+.video {
+    width: 100%;
+}
+.video__wrapper {
+    max-width: 1300px;
+    margin: 0 auto;
+    position: relative;
+}
+.video__item {
+    padding-top: 56.25%;
+}
+.video__element {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+/* ---explosion styles end--- */
+
+/* ---OurParticipation styles start--- */
+.fotorama {
+    display: none;
+}
+.OurParticipation {
+    text-align: center;
+}
+.OurParticipation-text {
+    margin: 0 auto 100px auto;
+    max-width: 899px;
+    text-align: center;
+}
+.OurParticipation-videos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 250px));
+    grid-gap: 1.5rem;
+    margin-bottom: 100px;
+    justify-content: center;
+}
+.OurParticipation-video {
+    position: relative;
+    padding: 0px 0px 90% 0px;
+}
+.OurParticipation-video iframe{
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    box-shadow: 12px 10px 20px 5px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+}
+
+.sectors {
+    text-align: center;
+}
+.elon_musk {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(3rem, 7rem));
+    grid-template-rows: repeat(auto-fit, minmax(3rem, 7rem));
+    grid-gap: 0.5rem; 
+    justify-content: center;
+}
+.elon_musk-head{
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start: 3;
+    grid-row-end: 7;
+}
+.elon_musk-svg {
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+}
+.Bsc_Ecosystem{
+    grid-column-start: 3;
+    grid-column-end: 5;
+    grid-row-start: 1;
+    grid-row-end: 1;
+    align-self: center;
+    justify-self: start;
+}
+.Ethereum_Ecosystem {
+    grid-column-start: 5;
+    grid-column-end: 7;
+    grid-row-start: 2;
+    grid-row-end: 2;
+}
+.Decentralized_Exchange {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 3;
+    grid-row-end: 3;
+    justify-self: start;
+}
+.Games {
+    grid-column-start: 2;
+    grid-column-end: 2;
+    grid-row-start: 4;
+    grid-row-end: 4;
+    padding-top: 20px;
+}
+.Memes {
+    grid-column-start: 5;
+    grid-column-end: 7;
+    grid-row-start: 4;
+    grid-row-end: 4;
+    align-self: end;
+}
+.Defi {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 5;
+    grid-row-end: 5;
+    align-self: center;
+}
+.Smart_contracts {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 6;
+    grid-row-end: 6;
+    align-self: center;
+}
+.Metaverse {
+    grid-column-start: 5;
+    grid-column-end: 7;
+    grid-row-start: 6;
+    grid-row-end: 6;
+    align-self: center;
+}
+.Launchpad {
+    grid-column-start: 4;
+    grid-column-end: 6;
+    grid-row-start: 7;
+    grid-row-end: 7;
+    justify-self: start;
+    padding-left: 30px;
+    padding-top: 30px;
+}
+.NFT {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 8;
+    grid-row-end: 8;
+    justify-self: end;
+}
+
+.reviews {
+    text-align: center;
+}
+.reviews__content {
+    height: 70vh;
+}
+.reviews__ico {
+    margin: 30px 0;
+}
+
+/*---about learning styles start---*/
+.about_learning__info {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    
+}
+.about_learning__text {
+    text-align: center;
+    margin-bottom: 80px;
+}
+.about_learning__end {
+    text-align: center;
+    margin: 80px 0 80px 0;
+}
+.about_learning__end-text {
+    font-size: 25px;
+}
+.block__settings {
+    margin-bottom: 50px;
+}
+.block__settings:last-child {
+    margin-bottom: 0px;
+}
+.Hachiko {
+    justify-self: start;
+    margin-top: 95px;
+}
+.Hachiko-svg {
+  width: 24vw;
+}
+.about_learning__p {
+    line-height: 1.5em;
+    font-size: 18px;
+}
+.triangle-down {
+  display: block;
+  width: 0;
+  height: 0;
+  border: 9px solid transparent;
+  border-top-color: #A2FF01;
+  margin: 5px;
+}
+.about_learning_grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 18px;
+}
+.telega {
+    justify-self: end;
+}
+/*---about learning styles end---*/
+
+/*---price styles start---*/
+.price__text {
+    text-align: center;
+    margin-bottom: 100px;
+}
+.block1 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 200px;
+}
+.d300 {
+    align-self: center;
+    justify-self: end;
+}
+/*---price styles stop---*/
+
+/*---next styles start---*/
+.next {
+    text-align: center;
+}
+.telegrambig {
+    margin-top: 70px;
+}
+.telegrambig-svg {
+    width: 7vw;
+}
+
+
+iframe {
+    border: 0px;
+}
+
+/*--------------mdedia start--------------*/
+/* media header start */
+@media screen and (max-width: 880px){
+    .header__burger{
+        display: block;
+    }
+    .header__nav {
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        background: #000;
+        z-index: 10;
+        padding: 75px;
+        transform: translateX(100%);
+        transition: .2s all linear;
+    }
+    .header__nav_active {
+        transform: translateX(0);
+    }
+    .header__item{
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 30px;
+    }
+    .header__item:last-child {
+        margin-bottom: 0;
+    }
+    .header__link {
+        font-size: 42px;
+        line-height: 48px;
+    }
+    .header__nav-close {
+        width: 40px;
+        height: 40px;
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        z-index: 11;
+    }
+    .header__nav-close-line {
+        display: block;
+        width: 100%;
+        height: 2px;
+        background: #fff;
+        position: absolute;
+        top: 50%;
+    }
+    .header__nav-close-line:first-child {
+        transform: translateY(-50%) rotate(45deg);
+    }
+    .header__nav-close-line:last-child {
+        transform: translateY(-50%) rotate(-45deg);
+    }
+}
+@media screen and (max-width: 633px) {
+ .header__logo-pic {
+        width: 200px;
+    }
+}
+/* media header end */
+/* media grid1 start */
+@media screen and (max-width: 1025px) {
+    .intro {
+        padding-top: 100px;
+    }
+    .intro__title1 {
+        font-size: 80px;
+    }
+    .intro__subtitle {
+        font-size: 16px;
+    }
+    .rectangle-button {
+        width: 245px;
+    }
+    .rectangle__text {
+        font-size: 15px;
+    }
+    .dwdw1svg {
+        width: 38vw;
+    }
+    .grid1 {
+        grid-column-gap: 20px;
+    }
+    .telegrambig-svg {
+        width: 15vw;
+    }
+}
+@media screen and (max-width: 804px) {
+     .grid1 {
+        grid-column-gap: 5px;
+    }
+}
+@media screen and (max-width: 769px) {
+    .grid__info {
+    margin-top: 0px;
+    }
+    .dwdw1 {
+        grid-row-start: -1;
+        justify-self: center;
+    }
+    .dwdw1svg {
+        width: 70vw;
+    }
+    .grid1 {
+        grid-row-gap: 50px;
+        grid-column-gap: 0px;
+    }
+    .intro__title1 {
+        font-size: 55px;
+    }
+    .intro__subtitle {
+        font-size: 15px;
+    }
+    .dwdw1, .grid__info {
+        grid-column: span 2;
+    }
+}
+/* media grid1 end */
+/*media Elon Musk start*/
+@media screen and (max-width: 600px) {
+    .elon_musk {
+        grid-column-gap: 15px;
+        grid-row-gap: 10px;
+    }
+    .elon_musk-head{
+    grid-column-start: 3;
+    grid-column-end: 3;
+    grid-row-start: 3;
+    grid-row-end: 7;
+    justify-self: center;
+    }
+    .elon_musk-svg {
+        width: 150px;
+         height: 150px;
+    }
+    .Ethereum_Ecosystem {
+    grid-column-start: 4;
+    grid-column-end: 6;
+    grid-row-start: 2;
+    grid-row-end: 2;
+    }
+    .Memes {
+    grid-column-start: 4;
+    grid-column-end: 4;
+    grid-row-start: 4;
+    grid-row-end: 4;
+    align-self: center;
+}
+    .Metaverse {
+    grid-column-start: 4;
+    grid-column-end: 4;
+    grid-row-start: 6;
+    grid-row-end: 6;
+    align-self: start;
+}
+.Launchpad {
+    grid-column-start: 3;
+    grid-column-end: 5;
+    grid-row-start: 7;
+    grid-row-end: 7;
+    justify-self: center;
+    padding-left: 0px;
+    padding-top: 0px;
+}
+.Decentralized_Exchange {
+    justify-self: center;
+}
+.Bsc_Ecosystem {
+    grid-column-start: 2;
+    grid-column-end: 4;
+    grid-row-start: 1;
+    grid-row-end: 1;
+    justify-self: center;
+    align-self: end;
+}
+.font-helvetica-Elon{
+  font-size: 15px;
+}
+}
+/*media Elon Musk end*/
+
+/*---about learning styles media start---*/
+@media screen and (max-width: 1025px) {
+  .Hachiko-svg {
+    width: 39vw;
+  }
+  .Hachiko {
+    justify-self: center;
+  }
+}
+@media screen and (max-width: 768px) {
+  .font-adderley-blue {
+    font-size: 40px;
+  }
+  .font-adderley-pink {
+    font-size: 40px;
+  }
+  .font-adderley-turquoise {
+    font-size: 40px;
+  }
+  .about_learning__p {
+    font-size: 15px;
+}
+}
+/*---about learning styles media end---*/
+
+/* price media styles */
+@media screen and (max-width: 1025px) {
+    .block1 {
+    grid-column-gap: 10px;
+}
+}
+/*---price styles end---*/
+    
+/*---about learning ---*/
+@media screen and (max-width: 642px){
+    .Hachiko, .block_info_flex {
+        grid-column: span 2;
+    }
+    .Hachiko {
+    grid-row-start: -1;
+    justify-self: center;
+    margin-top: 0px;
+    }
+    .block_info_flex {
+        justify-self: center;
+    }
+    .block1 {
+        grid-column-gap: 0px;
+    }
+}
+@media screen and (max-width: 500px) {
+.font-helvetica {
+  font-size: 15px;
+}
+
+.font-adderley {
+  font-size: 50px;
+}
+.font-adderley-pink {
+    font-size: 40px;
+}
+.font-adderley-blue {
+    font-size: 40px;
+}
+.font-adderley-turquoise {
+    font-size: 40px;
+}
+.about_learning__end-text {
+    font-size: 15px;
+}
+.price__text {
+    margin-bottom: 50px;
+}
+.telegrambig {
+    margin-top: 50px;
+}
+.telegrambig-svg {
+    width: 20vw;
+}
+}
+@media screen and (max-width: 824px) {
+    .fotorama {
+        display: block;
+        margin-bottom: 50px;
+}
+    .OurParticipation-videos {
+        display: none;
+    }
+    .fotorama__wrap {
+        margin: 0 auto;
+    }
+/*--------------mdedia end--------------*/
+
+
